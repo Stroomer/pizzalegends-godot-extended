@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://1kwgrar1qif5"]
+
+[ext_resource type="Script" uid="uid://bdjbk8pptqq5e" path="res://scenes/events/person_walk_to_position.gd" id="1_xcltw"]
+
+[node name="PersonWalkToPosition" type="Node2D" unique_id=708495874]
+script = ExtResource("1_xcltw")

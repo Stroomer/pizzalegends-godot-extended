@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b8n462eoddee0"]
+
+[ext_resource type="Script" uid="uid://n1ae276blmxk" path="res://scenes/hud/screen_fade.gd" id="1_3efe3"]
+
+[node name="screen_fade" type="ColorRect" unique_id=139806594]
+visible = false
+offset_right = 1153.0
+offset_bottom = 649.0
+script = ExtResource("1_3efe3")

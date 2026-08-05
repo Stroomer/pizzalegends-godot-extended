@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://mjawnw6jbc50"]
+
+[ext_resource type="Script" uid="uid://dlaj6bivd4gha" path="res://scenes/objects/person/person.gd" id="1_uryea"]
+[ext_resource type="Texture2D" uid="uid://dl7alt7ve5ku7" path="res://art/people/npc1.png" id="2_uryea"]
+[ext_resource type="Texture2D" uid="uid://cgcht6fqxr8iq" path="res://art/people/shadow.png" id="2_yamww"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_txmqm"]
+radius = 26.0
+
+[node name="person" type="CharacterBody2D" unique_id=1634091188]
+script = ExtResource("1_uryea")
+skin = "NPC1"
+
+[node name="body_Sprite" type="Sprite2D" parent="." unique_id=21258074]
+position = Vector2(0, -65.000015)
+scale = Vector2(5, 5)
+texture = ExtResource("2_uryea")
+hframes = 4
+vframes = 4
+
+[node name="shadow_Sprite" type="Sprite2D" parent="." unique_id=1433019387]
+position = Vector2(0, -65.000015)
+scale = Vector2(5, 5)
+texture = ExtResource("2_yamww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104845450]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_txmqm")

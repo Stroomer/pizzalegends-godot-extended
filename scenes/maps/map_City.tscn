@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://8hliks4n11uo"]
+
+[ext_resource type="Script" uid="uid://cmkud7un35w8g" path="res://scenes/maps/map_city.gd" id="1_htinr"]
+[ext_resource type="Texture2D" uid="uid://phq44mbed2qn" path="res://art/maps/OutsideCity1Lower.png" id="1_iwdvx"]
+[ext_resource type="PackedScene" uid="uid://xeqpyyelg2rl" path="res://scenes/objects/transition_tile/transition_tile.tscn" id="2_tqlq4"]
+[ext_resource type="Texture2D" uid="uid://bg3twokwlhblm" path="res://art/maps/OutsideCity1Upper.png" id="3_woxgw"]
+[ext_resource type="PackedScene" uid="uid://bh4jqiyurpx3n" path="res://scenes/objects/hero_spawn/hero_spawn.tscn" id="5_kphdb"]
+
+[node name="map_City" type="Node2D" unique_id=874050817]
+script = ExtResource("1_htinr")
+
+[node name="lower_Sprite" type="Sprite2D" parent="." unique_id=1877667778]
+scale = Vector2(5, 5)
+texture = ExtResource("1_iwdvx")
+centered = false
+
+[node name="transition_tile" parent="." unique_id=2048266418 instance=ExtResource("2_tqlq4")]
+position = Vector2(2123, 1334)
+go_to_map = "map_DemoRoom"
+spawn_at_position = Vector2(440, 1022)
+
+[node name="objects" type="Node2D" parent="." unique_id=1711056244]
+
+[node name="hero_spawn" parent="." unique_id=1621964506 instance=ExtResource("5_kphdb")]
+position = Vector2(1721, 1152)
+
+[node name="upper_Sprite" type="Sprite2D" parent="." unique_id=765091294]
+scale = Vector2(5, 5)
+texture = ExtResource("3_woxgw")
+centered = false
+
+[node name="walls" type="StaticBody2D" parent="." unique_id=1261415864]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls" unique_id=894000199]
+polygon = PackedVector2Array(2083, 1358, 2081, 1292, 2159, 1292, 2159, 1357, 2397, 1356, 2396, 1040, 2001, 1041, 2001, 1358)
+metadata/_edit_lock_ = true

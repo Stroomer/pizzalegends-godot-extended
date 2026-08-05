@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bh4jqiyurpx3n"]
+
+[ext_resource type="Texture2D" uid="uid://cr0x0jbj3tpcc" path="res://art/ui/hero-spawn.png" id="1_fi25r"]
+
+[node name="hero_spawn" type="Node2D" unique_id=1621964506]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1857833838]
+position = Vector2(0, -59.999996)
+scale = Vector2(5, 5)
+texture = ExtResource("1_fi25r")

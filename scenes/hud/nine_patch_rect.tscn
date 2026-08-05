@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c6tp1y7ml14jk"]
+
+[ext_resource type="Texture2D" uid="uid://b2k2016wo5ogd" path="res://art/ui/nine-slice.png" id="1_o8d4v"]
+
+[node name="NinePatchRect" type="NinePatchRect" unique_id=1278520037]
+offset_right = 82.6
+offset_bottom = 41.8
+scale = Vector2(5, 5)
+texture = ExtResource("1_o8d4v")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5

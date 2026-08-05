@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cv3jyyy7golsk"]
+
+[ext_resource type="Script" uid="uid://dgm4oghsnnl3i" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://0byjo2oaxrko" path="res://art/ui/cutscene-badge.png" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://b8n462eoddee0" path="res://scenes/hud/screen_fade.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://d1st8k2no757t" path="res://scenes/hud/pause_menu.tscn" id="4_jyhfs"]
+
+[node name="main" type="Node2D" unique_id=881771914]
+script = ExtResource("1_o5qli")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1043366720]
+
+[node name="cutscene_Sprite" type="Sprite2D" parent="CanvasLayer" unique_id=513449913]
+visible = false
+position = Vector2(1039.0002, 45.000015)
+scale = Vector2(5, 5)
+texture = ExtResource("2_0wfyh")
+
+[node name="screen_fade" parent="CanvasLayer" unique_id=139806594 instance=ExtResource("3_sugp2")]
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1297930133 instance=ExtResource("4_jyhfs")]

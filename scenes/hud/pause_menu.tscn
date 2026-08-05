@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d1st8k2no757t"]
+
+[ext_resource type="Script" uid="uid://dv1s7c8sightb" path="res://scenes/hud/pause_menu.gd" id="1_03n7f"]
+[ext_resource type="Theme" uid="uid://eoi22eyjtjv3" path="res://themes/theme.tres" id="1_5h01g"]
+[ext_resource type="PackedScene" uid="uid://c6tp1y7ml14jk" path="res://scenes/hud/nine_patch_rect.tscn" id="2_qp6lq"]
+
+[node name="PauseMenu" type="Control" unique_id=1297930133]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5h01g")
+script = ExtResource("1_03n7f")
+
+[node name="NinePatchRect" parent="." unique_id=1278520037 instance=ExtResource("2_qp6lq")]
+layout_mode = 0
+offset_left = 32.999996
+offset_top = 39.999996
+offset_right = 115.59999
+offset_bottom = 81.799995
+
+[node name="Label" type="Label" parent="." unique_id=271134307]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 132.0
+offset_right = 352.0
+offset_bottom = 173.0
+text = "GAME PAUSED"

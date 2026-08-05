@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://c37osle8j2gan"]
+
+[ext_resource type="Script" uid="uid://bhhnyx6mt06gl" path="res://scenes/maps/map_DemoRoom.gd" id="1_2inpo"]
+[ext_resource type="Texture2D" uid="uid://l4yubm178tbl" path="res://art/maps/DemoRoom1Lower.png" id="1_7kuol"]
+[ext_resource type="PackedScene" uid="uid://mjawnw6jbc50" path="res://scenes/objects/person/person.tscn" id="2_0cc7r"]
+[ext_resource type="PackedScene" uid="uid://bh4jqiyurpx3n" path="res://scenes/objects/hero_spawn/hero_spawn.tscn" id="3_kjlgt"]
+[ext_resource type="PackedScene" uid="uid://jv3t8qwqbwqt" path="res://scenes/objects/chair/chair.tscn" id="3_qhhho"]
+[ext_resource type="Texture2D" uid="uid://tqhbkn4h1per" path="res://art/maps/Map_DemoUpper.png" id="4_2woeh"]
+[ext_resource type="PackedScene" uid="uid://xeqpyyelg2rl" path="res://scenes/objects/transition_tile/transition_tile.tscn" id="7_vo0l4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txmqm"]
+size = Vector2(160, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2woeh"]
+size = Vector2(160, 235)
+
+[node name="map_DemoRoom" type="Node2D" unique_id=1452930331]
+script = ExtResource("1_2inpo")
+
+[node name="lower_Sprite" type="Sprite2D" parent="." unique_id=1311894078]
+scale = Vector2(5, 5)
+texture = ExtResource("1_7kuol")
+centered = false
+
+[node name="transition_tile" parent="." unique_id=2048266418 instance=ExtResource("7_vo0l4")]
+position = Vector2(440, 1022)
+go_to_map = "map_City"
+spawn_at_position = Vector2(2122, 1335)
+
+[node name="objects" type="Node2D" parent="." unique_id=1863272048]
+y_sort_enabled = true
+
+[node name="person1" parent="objects" unique_id=1634091188 instance=ExtResource("2_0cc7r")]
+position = Vector2(312, 650)
+skin = "Erio"
+
+[node name="person3" parent="objects" unique_id=1015571961 instance=ExtResource("2_0cc7r")]
+position = Vector2(852, 673)
+skin = "NPC6"
+
+[node name="chair" parent="objects" unique_id=1140656142 instance=ExtResource("3_qhhho")]
+position = Vector2(823, 543)
+
+[node name="chair2" parent="objects" unique_id=1058133155 instance=ExtResource("3_qhhho")]
+position = Vector2(415, 549)
+use_color = "Green"
+
+[node name="chair3" parent="objects" unique_id=767106459 instance=ExtResource("3_qhhho")]
+position = Vector2(433, 766)
+
+[node name="hero_spawn" parent="." unique_id=1621964506 instance=ExtResource("3_kjlgt")]
+position = Vector2(302, 893)
+
+[node name="upper_Sprite" type="Sprite2D" parent="." unique_id=1289182123]
+scale = Vector2(5, 5)
+texture = ExtResource("4_2woeh")
+centered = false
+
+[node name="walls" type="StaticBody2D" parent="." unique_id=1176357281]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls" unique_id=1343577013]
+position = Vector2(800, 802.5)
+shape = SubResource("RectangleShape2D_txmqm")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls" unique_id=634217495]
+position = Vector2(560, 762.5)
+shape = SubResource("RectangleShape2D_2woeh")
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls" unique_id=1200182179]
+polygon = PackedVector2Array(398, 1051, 398, 966, 79, 968, 80, 479, 320, 478, 320, 320, 481, 319, 481, 478, 878, 478, 879, 559, 964, 559, 964, 483, 1037, 481, 1038, 558, 1121, 558, 1121, 62, 61, 62, 61, 995, 384, 995, 384, 1069, 498, 1069, 498, 994, 1143, 995, 1141, 63, 1121, 63, 1122, 967, 482, 965, 483, 1050)
+metadata/_edit_lock_ = true

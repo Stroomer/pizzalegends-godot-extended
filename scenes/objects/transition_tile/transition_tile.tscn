@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://xeqpyyelg2rl"]
+
+[ext_resource type="Script" uid="uid://ccyl80do8qljo" path="res://scenes/objects/transition_tile/transition_tile.gd" id="1_5bnoj"]
+[ext_resource type="Texture2D" uid="uid://bkq0bw0xra0w4" path="res://art/ui/map-transition-tile.png" id="2_3pikh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txmqm"]
+size = Vector2(38, 18)
+
+[node name="transition_tile" type="Area2D" unique_id=2048266418]
+script = ExtResource("1_5bnoj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1909940663]
+visible = false
+scale = Vector2(5, 5)
+texture = ExtResource("2_3pikh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257651899]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_txmqm")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://v57t1o5vvvyf"]
+
+[ext_resource type="Script" uid="uid://qbu7qf45eck5" path="res://scenes/hud/text_message.gd" id="1_sault"]
+
+[node name="text_message" type="Control" unique_id=599509393]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sault")
+
+[node name="Label" type="Label" parent="." unique_id=1548172478]
+layout_mode = 0
+offset_right = 658.0
+offset_bottom = 410.0
+text = "HELLO I AM THE TEXT"

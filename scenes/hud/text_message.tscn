@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://v57t1o5vvvyf"]
+
+[ext_resource type="Theme" uid="uid://eoi22eyjtjv3" path="res://themes/theme.tres" id="1_8mv1f"]
+[ext_resource type="Script" uid="uid://qbu7qf45eck5" path="res://scenes/hud/text_message.gd" id="1_sault"]
+[ext_resource type="PackedScene" uid="uid://c6tp1y7ml14jk" path="res://scenes/hud/nine_patch_rect.tscn" id="2_cq5mn"]
+
+[node name="text_message" type="Control" unique_id=599509393]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8mv1f")
+script = ExtResource("1_sault")
+
+[node name="NinePatchRect" parent="." unique_id=1278520037 instance=ExtResource("2_cq5mn")]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 415.0
+offset_right = 242.39998
+offset_bottom = 456.8
+
+[node name="Label" type="Label" parent="." unique_id=1548172478]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 441.0
+offset_right = 1092.0
+offset_bottom = 596.0
+text = "HELLO I AM THE TEXT"

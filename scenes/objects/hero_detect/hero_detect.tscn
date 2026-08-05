@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://djr50ok42m7u7"]
+
+[ext_resource type="Texture2D" uid="uid://dsrj2pn6t3fu0" path="res://art/ui/detect.png" id="1_gkwg5"]
+[ext_resource type="Script" uid="uid://c5yhvgyothacm" path="res://scenes/objects/hero_detect/hero_detect.gd" id="1_jtit5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txmqm"]
+size = Vector2(45, 45.5)
+
+[node name="hero_detect" type="Area2D" unique_id=221233057]
+script = ExtResource("1_jtit5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1513473577]
+visible = false
+scale = Vector2(5, 5)
+texture = ExtResource("1_gkwg5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=782569857]
+position = Vector2(0, 2.25)
+shape = SubResource("RectangleShape2D_txmqm")

@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://mjawnw6jbc50"]
+
+[ext_resource type="Script" uid="uid://dlaj6bivd4gha" path="res://scenes/objects/person/person.gd" id="1_uryea"]
+[ext_resource type="Texture2D" uid="uid://dl7alt7ve5ku7" path="res://art/people/npc1.png" id="2_uryea"]
+[ext_resource type="Texture2D" uid="uid://cgcht6fqxr8iq" path="res://art/people/shadow.png" id="2_yamww"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_txmqm"]
+radius = 26.0
+
+[sub_resource type="Animation" id="Animation_6w72w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_cob3x"]
+resource_name = "Stand_Down"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_shw75"]
+resource_name = "Stand_Left"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [12]
+}
+
+[sub_resource type="Animation" id="Animation_ycmov"]
+resource_name = "Stand_Right"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_kuad8"]
+resource_name = "Stand_Up"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_uryea"]
+resource_name = "Walk_Down"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_5760h"]
+resource_name = "Walk_Left"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_eac23"]
+resource_name = "Walk_Right"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_mhkox"]
+resource_name = "Walk_Up"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6w72w"]
+_data = {
+&"RESET": SubResource("Animation_6w72w"),
+&"Stand_Down": SubResource("Animation_cob3x"),
+&"Stand_Left": SubResource("Animation_shw75"),
+&"Stand_Right": SubResource("Animation_ycmov"),
+&"Stand_Up": SubResource("Animation_kuad8"),
+&"Walk_Down": SubResource("Animation_uryea"),
+&"Walk_Left": SubResource("Animation_5760h"),
+&"Walk_Right": SubResource("Animation_eac23"),
+&"Walk_Up": SubResource("Animation_mhkox")
+}
+
+[node name="person" type="CharacterBody2D" unique_id=1634091188]
+script = ExtResource("1_uryea")
+
+[node name="body_Sprite" type="Sprite2D" parent="." unique_id=21258074]
+position = Vector2(0, -65.000015)
+scale = Vector2(5, 5)
+texture = ExtResource("2_uryea")
+hframes = 4
+vframes = 4
+
+[node name="shadow_Sprite" type="Sprite2D" parent="." unique_id=1433019387]
+position = Vector2(0, -65.000015)
+scale = Vector2(5, 5)
+texture = ExtResource("2_yamww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1104845450]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_txmqm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1839946523]
+libraries/ = SubResource("AnimationLibrary_6w72w")

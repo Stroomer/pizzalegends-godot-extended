@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c1t2wrwlgf8vp"]
+
+[ext_resource type="Script" uid="uid://v2qs3g3ljjxc" path="res://scenes/events/person_stand.gd" id="1_ue0iq"]
+
+[node name="PersonStand" type="Node2D" unique_id=594186971]
+script = ExtResource("1_ue0iq")
