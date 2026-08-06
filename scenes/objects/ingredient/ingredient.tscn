@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c1167epwc3uf7"]
+
+[ext_resource type="Script" uid="uid://divhd6ky5gdjy" path="res://scenes/objects/ingredient/ingredient.gd" id="1_epa6h"]
+[ext_resource type="Texture2D" uid="uid://bbiu84ks1er5e" path="res://art/objects/ingredients/cheese.png" id="1_m0mk6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txmqm"]
+size = Vector2(68.75, 39.5)
+
+[node name="ingredient" type="StaticBody2D" unique_id=1840648289]
+script = ExtResource("1_epa6h")
+
+[node name="ingredient_Sprite" type="Sprite2D" parent="." unique_id=269578229]
+position = Vector2(0, -17.999998)
+scale = Vector2(5, 5)
+texture = ExtResource("1_m0mk6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=739774226]
+position = Vector2(0, 1.75)
+shape = SubResource("RectangleShape2D_txmqm")

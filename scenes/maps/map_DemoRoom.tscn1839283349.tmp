@@ -54,11 +54,10 @@ position = Vector2(160, 698)
 
 [node name="ingredient2" parent="objects" unique_id=981682044 instance=ExtResource("6_q0muf")]
 position = Vector2(200, 567)
-use_type = "Brocolli"
+use_type = "Egg"
 
 [node name="ingredient3" parent="objects" unique_id=795914879 instance=ExtResource("6_q0muf")]
 position = Vector2(438, 638)
-use_type = "Pepper"
 
 [node name="hero_spawn" parent="." unique_id=1621964506 instance=ExtResource("3_kjlgt")]
 position = Vector2(302, 893)
